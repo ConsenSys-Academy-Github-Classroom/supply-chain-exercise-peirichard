@@ -56,7 +56,6 @@ contract('SupplyChain', function(accounts) {
 
         await instance.addItem(name, price, {from: alice})
         var aliceBalanceBefore = await web3.eth.getBalance(alice)
-        console.log("aliceBalanceBefore is " + aliceBalanceBefore)
         var bobBalanceBefore = await web3.eth.getBalance(bob)
 
         await instance.buyItem(0, {from: bob, value: excessAmount})
